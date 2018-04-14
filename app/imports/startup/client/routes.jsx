@@ -18,19 +18,23 @@ const Routes = () => (<Router history={browserHistory}>
   <Route path="/about" component={Component.MasterLayout}>
     <IndexRoute component={Component.About}/>
   </Route>
-  
-      <Route path="/marketplace" component={Component.MasterLayout}>
-  <IndexRoute component={Component.Marketplace}/>
-</Route>
-      
-      <Route path="/config" component={Component.MasterLayout}>
-  <IndexRoute component={Component.Config}/>
-</Route>
-      
-      <Route path="/tasks" component={Component.MasterLayout}>
-  <IndexRoute component={Component.Tasks}/>
-</Route>
-      <Route path="*" component={Component.MasterLayout}>
+
+  <Route path="/marketplace" component={Component.MasterLayout}>
+    <IndexRoute component={Component.Marketplace}/>
+  </Route>
+
+  <Route path="/config" component={Component.MasterLayout}>
+    <IndexRoute component={Component.Config}/>
+  </Route>
+
+  <Route path="/tasks" component={Component.MasterLayout}>
+    <IndexRoute component={Component.Tasks}/>
+  </Route>
+
+  <Route path="/marketplace/:type" component={Component.MasterLayout}>
+    <IndexRoute component={Component.Type}/>
+  </Route>
+  <Route path="*" component={Component.MasterLayout}>
     <IndexRoute component={Component.NotFound}/>
   </Route>
 </Router>);

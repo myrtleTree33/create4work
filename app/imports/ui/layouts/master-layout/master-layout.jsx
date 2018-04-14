@@ -37,13 +37,13 @@ class MasterLayoutComponent extends Component {
               Tasks
             </Link>
 
-            <div class="right menu">
+            <div className="right menu">
               <Link to="/config" className="item">
                 <i className="cogs icon"></i>
                 Config
               </Link>
             </div>
-            
+
           </div>
         </div>
       </div>

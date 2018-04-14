@@ -1,3 +1,5 @@
+import { Type } from '/imports/ui/pages/marketplace/type/type.jsx';
+
 import { Tasks } from '/imports/ui/pages/tasks/tasks.jsx';
 
 import { Config } from '/imports/ui/pages/config/config.jsx';
@@ -35,3 +37,5 @@ export { Marketplace };
 export { Config };
 
 export { Tasks };
+
+export { Type };
