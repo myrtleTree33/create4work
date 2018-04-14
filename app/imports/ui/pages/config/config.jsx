@@ -1,6 +1,6 @@
 import './config.css';
-import React, { Component } from 'react';
-import { withTracker } from 'meteor/react-meteor-data';
+import React, {Component} from 'react';
+import {withTracker} from 'meteor/react-meteor-data';
 
 class ConfigComponent extends Component {
   static propTypes = {}
@@ -12,18 +12,25 @@ class ConfigComponent extends Component {
     this.state = {};
   }
 
-  componentWillMount() {
-  }
+  componentWillMount() {}
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  componentWillUnmount() {
-  }
+  componentWillUnmount() {}
 
   render() {
-    return (<h2 className="config">Find me in app/imports/ui/pages/config/config</h2>);
+    return (<div className="config">
+      <div className="center aligned ui container">
+        <h1>Settings</h1>
+      </div>
+    </div>);
   }
 }
-const Config = withTracker(() => { return {}; })(ConfigComponent);
+const Config = withTracker(() => {
+  return {};
+})(ConfigComponent);
 
-export { Config, ConfigComponent };
+export {
+  Config,
+  ConfigComponent
+};
