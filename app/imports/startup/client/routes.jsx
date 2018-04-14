@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 /**
  * The React Router client side routing definitions.
@@ -9,16 +9,30 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import * as Component from './templates.jsx';
 
-const Routes = () => (
-  <Router history={ browserHistory }>
-    
-      <Route path="/" component={Component.MasterLayout}>
-  <IndexRoute component={Component.Home}/>
+const Routes = () => (<Router history={browserHistory}>
+
+  <Route path="/" component={Component.MasterLayout}>
+    <IndexRoute component={Component.Home}/>
+  </Route>
+
+  <Route path="/about" component={Component.MasterLayout}>
+    <IndexRoute component={Component.About}/>
+  </Route>
+  
+      <Route path="/marketplace" component={Component.MasterLayout}>
+  <IndexRoute component={Component.Marketplace}/>
 </Route>
-      <Route path="*" component={ Component.MasterLayout }>
-      <IndexRoute component={ Component.NotFound }/>
-    </Route>
-  </Router>
-);
+      
+      <Route path="/config" component={Component.MasterLayout}>
+  <IndexRoute component={Component.Config}/>
+</Route>
+      
+      <Route path="/tasks" component={Component.MasterLayout}>
+  <IndexRoute component={Component.Tasks}/>
+</Route>
+      <Route path="*" component={Component.MasterLayout}>
+    <IndexRoute component={Component.NotFound}/>
+  </Route>
+</Router>);
 
 export default Routes;
