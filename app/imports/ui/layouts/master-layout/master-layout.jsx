@@ -24,28 +24,25 @@ class MasterLayoutComponent extends Component {
 
   render() {
     return (<div>
-      <div className="ui segment">
-        <div className="ui red fixed inverted menu">
-          <div className="ui container">
 
-            <Link to="/marketplace" className="item">
-              <i className="search plus icon"></i>
-              Marketplace
-            </Link>
-            <Link to="/tasks" className="item">
-              <i className="tasks icon"></i>
-              Tasks
-            </Link>
-
-            <div className="right menu">
-              <Link to="/config" className="item">
-                <i className="cogs icon"></i>
-                Config
-              </Link>
-            </div>
-
-          </div>
+      <div className="ui secondary pointing menu">
+        <Link to="/" className="item">
+          Home
+        </Link>
+        <Link to="/marketplace" className="item active">
+          Marketplace
+        </Link>
+        <Link to="/tasks" className="item">
+          Tasks
+        </Link>
+        <div className="right menu">
+          <Link to="/config" className="ui item">
+            Config
+          </Link>
         </div>
+      </div>
+      <div className="ui segment">
+        <p></p>
       </div>
 
       {this.props.children}
