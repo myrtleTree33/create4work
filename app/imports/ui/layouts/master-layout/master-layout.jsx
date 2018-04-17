@@ -1,6 +1,8 @@
 import './master-layout.css';
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+
+import {NavBar} from '../../pages/nav-bar/nav-bar.jsx';
+
 
 class MasterLayoutComponent extends Component {
   static propTypes = {}
@@ -25,25 +27,7 @@ class MasterLayoutComponent extends Component {
   render() {
     return (<div>
 
-      <div className="ui secondary pointing menu">
-        <Link to="/" className="item">
-          Home
-        </Link>
-        <Link to="/marketplace" className="item active">
-          Marketplace
-        </Link>
-        <Link to="/tasks" className="item">
-          Tasks
-        </Link>
-        <div className="right menu">
-          <Link to="/config" className="ui item">
-            Config
-          </Link>
-        </div>
-      </div>
-      <div className="ui segment">
-        <p></p>
-      </div>
+      <NavBar />
 
       {this.props.children}
 

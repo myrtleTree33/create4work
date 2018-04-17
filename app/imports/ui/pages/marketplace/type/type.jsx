@@ -15,30 +15,18 @@ class TypeComponent extends Component {
   componentWillMount() {}
 
   componentDidMount() {
-    console.log(this.props.params);
   }
 
   componentWillUnmount() {}
 
   render() {
-    return (<div>
-      <div className="ui container">
-        <div className="ui center aligned basic segment">
-          <h2 className="type">What are you looking for?</h2>
-        </div>
-        <div className="ui stackable center aligned three column grid">
-          <div className="column">
-            Latin classes
-          </div>
-          <div className="column">
-            Waltz classes
-          </div>
-          <div className="column">
-            Tap dancing
-          </div>
-          <div className="column">
-            West Coast Swing
-          </div>
+    return (<div className="card type">
+      <div className="image">
+        <img src={this.props.type.imgUrl}/></div>
+      <div className="content">
+        <div className="header">{this.props.type.title}</div>
+        <div className="description">
+          {this.props.type.description}
         </div>
       </div>
     </div>);

@@ -1,3 +1,5 @@
+import { NavBar } from '/imports/ui/pages/nav-bar/nav-bar.jsx';
+
 import { Type } from '/imports/ui/pages/marketplace/type/type.jsx';
 
 import { Tasks } from '/imports/ui/pages/tasks/tasks.jsx';
@@ -39,3 +41,5 @@ export { Config };
 export { Tasks };
 
 export { Type };
+
+export { NavBar };
